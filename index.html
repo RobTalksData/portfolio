@@ -6,63 +6,86 @@
     <title>Rob Hammond | Commercial & Operational Solutions Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #38BDF8, #818CF8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
 
     <!-- Header / Hero -->
-    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+    <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                <h1 class="text-2xl font-bold tracking-tight">Rob Hammond</h1>
-                <p class="text-xs text-sky-400 font-mono tracking-wide uppercase">Commercial & Operational Solutions Architect</p>
+                <h1 class="text-2xl font-bold tracking-tight text-white">Rob Hammond</h1>
+                <p class="text-xs text-sky-400 font-mono tracking-wide uppercase font-semibold">Commercial & Operational Solutions Architect</p>
             </div>
-            <div class="flex items-center gap-4 text-sm text-slate-400">
-                <span><i class="fa-solid font-mono text-slate-500 mr-1"></i> Peterborough, UK</span>
-                <a href="mailto:robtalksdata@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fa-solid fa-envelope mr-1"></i> Email</a>
-                <a href="https://linkedin.com/in/hammondrob" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+            <div class="flex items-center gap-5 text-sm text-slate-300">
+                <span><i class="fa-solid fa-location-dot text-slate-500 mr-1.5"></i> Peterborough, UK</span>
+                <a href="mailto:robtalksdata@gmail.com" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-envelope text-slate-400"></i> Email</a>
+                <a href="https://linkedin.com/in/hammondrob" target="_blank" class="hover:text-sky-400 transition-colors flex items-center gap-1.5"><i class="fa-brands fa-linkedin text-slate-400"></i> LinkedIn</a>
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-10 space-y-16">
+    <main class="max-w-6xl mx-auto px-6 py-10 space-y-12">
 
-        <!-- Executive Summary & Metrics Grid -->
+        <!-- Executive Summary & Strategic Metrics -->
         <section class="space-y-8">
-            <div class="max-w-3xl">
-                <h2 class="text-3xl font-extrabold tracking-tight">High-Impact Technical Fixer</h2>
-                <p class="mt-4 text-slate-300 leading-relaxed text-lg">
-                    Transforming complex operational, data, and supply-chain bottlenecks into high-yield commercial assets. Specialising in building bespoke technical pipelines, live-environment operational protocols, and unlocking hidden revenue infrastructure.
+            <div class="max-w-3xl space-y-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Executive Brief
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Bridging Operational Bottlenecks & High-Yield Commercial Assets</h2>
+                <p class="text-slate-300 leading-relaxed text-base md:text-lg">
+                    I design and deploy custom technical pipelines, operational protocols, and data infrastructure to eliminate workflow friction, secure legacy systems, and unlock new revenue channels.
                 </p>
             </div>
 
             <!-- Impact Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all space-y-1.5">
                     <div class="text-3xl font-black text-sky-400">£2.5M</div>
-                    <div class="text-sm font-semibold text-slate-200">Export Pipeline</div>
-                    <p class="text-xs text-slate-400">Zero-capital tooling whitelist architecture for Sub-Saharan expansion.</p>
+                    <div class="text-sm font-semibold text-slate-100">Export Pipeline Unlocked</div>
+                    <p class="text-xs text-slate-400 leading-normal">Zero-capital tooling architecture enabling Sub-Saharan expansion.</p>
                 </div>
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-                    <div class="text-3xl font-black font-mono text-emerald-400">5 Mins</div>
-                    <div class="text-sm font-semibold text-slate-200">Execution Time</div>
-                    <p class="text-xs text-slate-400">Replaced 400+ hours of manual data cross-referencing via Python pipeline.</p>
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all space-y-1.5">
+                    <div class="text-3xl font-black text-emerald-400">99.8%</div>
+                    <div class="text-sm font-semibold text-slate-100">Lead-Time Reduction</div>
+                    <p class="text-xs text-slate-400 leading-normal">Automated 400+ hours of manual data matching down to a 5-minute Python run.</p>
                 </div>
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-                    <div class="text-3xl font-black text-indigo-400">200%</div>
-                    <div class="text-sm font-semibold text-slate-200">Testing Velocity</div>
-                    <p class="text-xs text-slate-400">Headless footprint-obfuscated SERP scraper boosting copy variations.</p>
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all space-y-1.5">
+                    <div class="text-3xl font-black text-indigo-400">3×</div>
+                    <div class="text-sm font-semibold text-slate-100">Ad Testing Velocity</div>
+                    <p class="text-xs text-slate-400 leading-normal">Engineered competitive SERP intelligence scrapers driving double-digit CTR lifts.</p>
                 </div>
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-                    <div class="text-3xl font-black text-amber-400">Zero</div>
-                    <div class="text-sm font-semibold text-slate-200">Facility Downtime</div>
-                    <p class="text-xs text-slate-400">Segmented operational protocols executed in live high-stakes corridors.</p>
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all space-y-1.5">
+                    <div class="text-3xl font-black text-amber-400">0 Hours</div>
+                    <div class="text-sm font-semibold text-slate-100">Operational Downtime</div>
+                    <p class="text-xs text-slate-400 leading-normal">Executed live-environment infrastructure upgrades in active, high-stakes corridors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical & Tooling Stack -->
+        <section class="space-y-4">
+            <h3 class="text-lg font-bold text-slate-200 border-b border-slate-800 pb-2 flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-sky-400 text-sm"></i> Core Technical Competencies
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-2">
+                    <div class="text-sky-400 font-semibold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> Automation & Scripting
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">Python (Selenium, Playwright), SQL, Advanced Excel (VBA, Automated Dashboards), API Integrations</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-2">
+                    <div class="text-indigo-400 font-semibold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-database"></i> Data Architecture
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">Fuzzy-Logic Matching, Relational Datasets, Headless Web Scraping, Footprint Obfuscation, Tableau, CRM Systems</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-2">
+                    <div class="text-emerald-400 font-semibold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line"></i> Strategic Operations
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">Digital Marketing Execution (Google Ads, GA4, Attribution Modeling), Supply Chain Resilience, Site Logistics</p>
                 </div>
             </div>
         </section>
@@ -71,40 +94,43 @@
         <section class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-sky-500/30 space-y-6">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                    <span class="text-xs font-mono px-2 py-1 bg-sky-950 text-sky-300 border border-sky-800 rounded">Interactive Demo</span>
-                    <h3 class="text-xl font-bold mt-2">Algorithmic Fuzzy Logic Keyword Pipeline</h3>
-                    <p class="text-sm text-slate-400">Simulating the process that deduplicated Viator's multi-geo campaign datasets.</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] font-mono font-semibold px-2 py-0.5 bg-sky-950 text-sky-300 border border-sky-800 rounded uppercase">Live Concept</span>
+                        <span class="text-xs text-slate-400">Proof of Concept: High-Volume Data Matching</span>
+                    </div>
+                    <h3 class="text-xl font-bold mt-1 text-white">Algorithmic Keyword Deduplication Engine</h3>
+                    <p class="text-sm text-slate-300">Simulates the automated data pipeline used to streamline global ad keyword datasets for Viator.</p>
                 </div>
-                <button onclick="runDeduplication()" class="px-4 py-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm rounded-lg transition-colors flex items-center gap-2">
-                    <i class="fa-solid fa-play"></i> Run Fuzzy Pipeline
+                <button onclick="runDeduplication()" class="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm rounded-lg transition-all shadow-lg shadow-sky-500/20 flex items-center gap-2">
+                    <i class="fa-solid fa-play"></i> Execute Pipeline
                 </button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
                 <!-- Raw Data Box -->
                 <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
-                    <div class="text-slate-400 flex justify-between">
-                        <span>RAW INPUT DATASET</span>
-                        <span id="raw-count" class="text-rose-400">6 Items</span>
+                    <div class="text-slate-400 flex justify-between font-sans">
+                        <span class="font-semibold text-slate-300">Unstructured Raw Input</span>
+                        <span id="raw-count" class="text-rose-400 font-mono">6 Duplicate Entries</span>
                     </div>
                     <ul id="raw-list" class="space-y-1 text-slate-300">
-                        <li class="p-1 bg-slate-900 rounded">1. London Walking Tour Ticket</li>
-                        <li class="p-1 bg-slate-900 rounded">2. london walking tours ticket</li>
-                        <li class="p-1 bg-slate-900 rounded">3. Buy London Walking Tour Tickets</li>
-                        <li class="p-1 bg-slate-900 rounded">4. Eiffel Tower Fast Track Pass</li>
-                        <li class="p-1 bg-slate-900 rounded">5. eiffel tower fast-track pass</li>
-                        <li class="p-1 bg-slate-900 rounded">6. Eiffel Tower Entry Ticket</li>
+                        <li class="p-1.5 bg-slate-900 rounded">1. London Walking Tour Ticket</li>
+                        <li class="p-1.5 bg-slate-900 rounded">2. london walking tours ticket</li>
+                        <li class="p-1.5 bg-slate-900 rounded">3. Buy London Walking Tour Tickets</li>
+                        <li class="p-1.5 bg-slate-900 rounded">4. Eiffel Tower Fast Track Pass</li>
+                        <li class="p-1.5 bg-slate-900 rounded">5. eiffel tower fast-track pass</li>
+                        <li class="p-1.5 bg-slate-900 rounded">6. Eiffel Tower Entry Ticket</li>
                     </ul>
                 </div>
 
                 <!-- Cleaned Output Box -->
                 <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
-                    <div class="text-slate-400 flex justify-between">
-                        <span>AUTOMATED FUZZY CLUSTER OUTPUT</span>
-                        <span id="clean-count" class="text-slate-500">Unprocessed</span>
+                    <div class="text-slate-400 flex justify-between font-sans">
+                        <span class="font-semibold text-slate-300">Automated Cluster Output</span>
+                        <span id="clean-count" class="text-slate-500 font-mono">Awaiting Execution</span>
                     </div>
                     <ul id="clean-list" class="space-y-1 text-slate-500 italic">
-                        <li class="p-1">Click "Run Fuzzy Pipeline" to trigger clustering...</li>
+                        <li class="p-1.5">Click "Execute Pipeline" to run fuzzy matching algorithm...</li>
                     </ul>
                 </div>
             </div>
@@ -112,39 +138,103 @@
 
         <!-- Case Studies Portfolio -->
         <section class="space-y-6">
-            <h3 class="text-xl font-bold border-b border-slate-800 pb-2">Core Case Studies</h3>
-
-            <!-- Case Study 1 -->
-            <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 space-y-3">
-                <div class="flex justify-between items-start flex-wrap gap-2">
-                    <h4 class="text-lg font-bold text-sky-400">Automated SERP Data Engineering & Competitor Intelligence</h4>
-                    <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-300 rounded">ThinkVEN</span>
-                </div>
-                <p class="text-sm text-slate-300"><strong class="text-slate-100">Problem:</strong> Client required granular visibility into competitor search tactics across massive keyword groups without triggering bot-detection systems.</p>
-                <p class="text-sm text-slate-300"><strong class="text-slate-100">Solution:</strong> Engineered a headless web-scraping architecture using Python/Selenium with footprint obfuscation. Automated the harvest and dynamic categorization of organic/paid search elements.</p>
-                <p class="text-sm text-emerald-400 font-semibold"><i class="fa-solid fa-arrow-up-right-dots mr-1"></i> Result: Boosted ad-copy variation testing velocity by 200% with double-digit CTR lifts on targeted accounts.</p>
-            </div>
-            
-            <!-- Case Study: Polyflor -->
-            <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 space-y-3">
-                <div class="flex justify-between items-start flex-wrap gap-2">
-                    <h4 class="text-lg font-bold text-sky-400">Multi-Sector Specification & Territory Portfolio Scaling</h4>
-                    <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-300 rounded">Polyflor Ltd</span>
-                </div>
-                <p class="text-sm text-slate-300"><strong class="text-slate-100">Problem:</strong> Managing high-volume, strict-compliance material specifications across 25+ concurrent healthcare, education, and commercial build projects without compromising lead times or project margins.</p>
-                <p class="text-sm text-slate-300"><strong class="text-slate-100">Solution:</strong> Engineered an end-to-end account management and specification protocol. Streamlined client communications, synchronized site delivery schedules with main contractors, and mapped technical product requirements directly to client budget frameworks.</p>
-                <p class="text-sm text-emerald-400 font-semibold"><i class="fa-solid fa-arrow-up-right-dots mr-1"></i> Result: Successfully executed and delivered 25+ major public and commercial sector accounts, locking in repeat specification frameworks and maximizing territory revenue.</p>
+            <div class="flex justify-between items-end border-b border-slate-800 pb-2">
+                <h3 class="text-xl font-bold text-white">Commercial Case Studies</h3>
+                <span class="text-xs text-slate-400">Demonstrated Impact Across Growth, Data & Operations</span>
             </div>
 
-            <!-- Case Study 2 -->
-            <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 space-y-3">
-                <div class="flex justify-between items-start flex-wrap gap-2">
-                    <h4 class="text-lg font-bold text-sky-400">Zero-Capital Product Engineering & Market Expansion</h4>
-                    <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-300 rounded">Alsysco</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Case Study 1: Viator -->
+                <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="text-base font-bold text-sky-400">Algorithmic Data Pipeline & Cleanup</h4>
+                            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Viator</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Challenge:</strong> Legacy keyword export files were crashing standard applications, stalling marketing workflows, and wasting ad spend on redundant search terms across global campaigns.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Solution:</strong> Built a custom Python pipeline incorporating fuzzy-logic matching algorithms to parse, cluster, and deduplicate multi-geo campaign keywords automatically.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800/80">
+                        <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1.5"></i> Result: Replaced 400+ hours of manual data cross-referencing with a 5-minute automated pipeline run.</p>
+                    </div>
                 </div>
-                <p class="text-sm text-slate-300"><strong class="text-slate-100">Problem:</strong> High capital barriers for tooling dies and regional power grid volatility blocked sub-Saharan market growth.</p>
-                <p class="text-sm text-slate-300"><strong class="text-slate-100">Solution:</strong> Audited open-die catalogs to compile a zero-cost solution catalog, alongside deploying off-grid arbor press installation kits.</p>
-                <p class="text-sm text-emerald-400 font-semibold"><i class="fa-solid fa-arrow-up-right-dots mr-1"></i> Result: Saved 100% of tooling capital costs, unlocking £2.5M in export revenue pipeline across 3 multi-country agreements.</p>
+
+                <!-- Case Study 2: Alsysco -->
+                <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="text-base font-bold text-sky-400">Zero-Capital Product Engineering & Expansion</h4>
+                            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Alsysco</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Challenge:</strong> Heavy capital requirements for custom tooling dies and regional power grid instability threatened Sub-Saharan expansion efforts.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Solution:</strong> Audited existing open-die tooling catalogs to engineer zero-capital architectural solutions paired with off-grid installation tooling kits.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800/80">
+                        <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1.5"></i> Result: Eliminated 100% of upfront capital tooling expenses, unlocking a £2.5M export pipeline across 3 international agreements.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 3: ThinkVEN -->
+                <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="text-base font-bold text-sky-400">Automated Competitive Search Scraping</h4>
+                            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded">ThinkVEN</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Challenge:</strong> Required granular, real-time insight into competitor search strategies without triggering automated anti-bot defenses.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Solution:</strong> Engineered a headless Python/Selenium web scraper utilizing footprint obfuscation to harvest and classify search page elements dynamically.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800/80">
+                        <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1.5"></i> Result: Increased ad-copy variation testing speed by 200%, driving double-digit CTR improvements on priority accounts.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 4: Frimley Trust Estates -->
+                <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="text-base font-bold text-sky-400">Live Infrastructure Engineering</h4>
+                            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded">NHS Frimley Trust</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Challenge:</strong> Vital hospital corridor flooring required complete replacement where medical traffic could not be halted or rerouted.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Solution:</strong> Designed and deployed a mobile, modular installation protocol occupying under 50% of corridor width during active work phases.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800/80">
+                        <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1.5"></i> Result: Delivered project on schedule with zero facility closures or interruptions to critical emergency care routes.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 5: Polyflor -->
+                <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="text-base font-bold text-sky-400">Multi-Account Specification Scaling</h4>
+                            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Polyflor Ltd</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Challenge:</strong> Managing high-volume technical material specifications across 25+ simultaneous public and commercial builds without margin erosion or delivery delays.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Solution:</strong> Built an end-to-end account management protocol mapping technical specifications directly to main contractor schedules and budget frameworks.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800/80">
+                        <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1.5"></i> Result: Successfully executed 25+ key accounts, securing recurring specification frameworks and protecting margin stability.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 6: CAPS / Frimley Trust -->
+                <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start gap-2">
+                            <h4 class="text-base font-bold text-sky-400">Supply Chain De-risking & Lead-Time Optimization</h4>
+                            <span class="text-[11px] font-mono px-2 py-0.5 bg-slate-800 text-slate-300 rounded">CAPS / Frimley Trust</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Challenge:</strong> Critical healthcare builds were exposed to unpredictable global supply chains, risking expensive project downtime.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed"><strong class="text-slate-100">Solution:</strong> Shifted purchasing strategy to a localized buffer-stock call-off model by securing factory allocations for regional distributor dispatch.</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800/80">
+                        <p class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1.5"></i> Result: Reduced material lead times from weeks to hours, eliminating supply-related downtime across 3 hospitals.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -155,19 +245,20 @@
             const cleanCount = document.getElementById('clean-count');
             
             cleanList.className = "space-y-1 font-mono text-xs text-slate-200";
-            cleanCount.className = "text-emerald-400 font-bold";
-            cleanCount.innerText = "2 Primary Clusters (Deduplicated)";
+            cleanCount.className = "text-emerald-400 font-bold font-mono";
+            cleanCount.innerText = "2 Clean Clusters (100% Deduplicated)";
 
             cleanList.innerHTML = `
                 <li class="p-2 bg-sky-950/40 border border-sky-800/50 rounded space-y-1">
-                    <div class="text-sky-300 font-bold">Cluster 1: [London Walking Tours] (Matching Score: 94%)</div>
-                    <div class="text-slate-400 text-[11px] pl-2">↳ Grouped: "London Walking Tour Ticket", "london walking tours ticket", "Buy London..."</div>
+                    <div class="text-sky-300 font-bold">Cluster 1: [London Walking Tours] <span class="text-emerald-400 font-normal text-[11px]">(94% Match Score)</span></div>
+                    <div class="text-slate-400 text-[11px] pl-2">↳ Consolidated 3 variations into primary target vector</div>
                 </li>
                 <li class="p-2 bg-sky-950/40 border border-sky-800/50 rounded space-y-1">
-                    <div class="text-sky-300 font-bold">Cluster 2: [Eiffel Tower Access] (Matching Score: 91%)</div>
-                    <div class="text-slate-400 text-[11px] pl-2">↳ Grouped: "Eiffel Tower Fast Track Pass", "eiffel tower fast-track pass", "Eiffel Tower Entry..."</div>
+                    <div class="text-sky-300 font-bold">Cluster 2: [Eiffel Tower Access] <span class="text-emerald-400 font-normal text-[11px]">(91% Match Score)</span></div>
+                    <div class="text-slate-400 text-[11px] pl-2">↳ Consolidated 3 variations into primary target vector</div>
                 </li>
             `;
         }
     </script>
 </body>
+</html>
