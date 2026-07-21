@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob Hammond | Commercial & Operational Solutions Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #38BDF8, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Header / Hero -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">Rob Hammond</h1>
+                <p class="text-xs text-sky-400 font-mono tracking-wide uppercase">Commercial & Operational Solutions Architect</p>
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-400">
+                <span><i class="fa-solid font-mono text-slate-500 mr-1"></i> Peterborough, UK</span>
+                <a href="mailto:robtalksdata@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fa-solid fa-envelope mr-1"></i> Email</a>
+                <a href="https://linkedin.com/in/hammondrob" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-10 space-y-16">
+
+        <!-- Executive Summary & Metrics Grid -->
+        <section class="space-y-8">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl font-extrabold tracking-tight">High-Impact Technical Fixer</h2>
+                <p class="mt-4 text-slate-300 leading-relaxed text-lg">
+                    Transforming complex operational, data, and supply-chain bottlenecks into high-yield commercial assets. Specialising in building bespoke technical pipelines, live-environment operational protocols, and unlocking hidden revenue infrastructure.
+                </p>
+            </div>
+
+            <!-- Impact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                    <div class="text-3xl font-black text-sky-400">£2.5M</div>
+                    <div class="text-sm font-semibold text-slate-200">Export Pipeline</div>
+                    <p class="text-xs text-slate-400">Zero-capital tooling whitelist architecture for Sub-Saharan expansion.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                    <div class="text-3xl font-black font-mono text-emerald-400">5 Mins</div>
+                    <div class="text-sm font-semibold text-slate-200">Execution Time</div>
+                    <p class="text-xs text-slate-400">Replaced 400+ hours of manual data cross-referencing via Python pipeline.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                    <div class="text-3xl font-black text-indigo-400">200%</div>
+                    <div class="text-sm font-semibold text-slate-200">Testing Velocity</div>
+                    <p class="text-xs text-slate-400">Headless footprint-obfuscated SERP scraper boosting copy variations.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+                    <div class="text-3xl font-black text-amber-400">Zero</div>
+                    <div class="text-sm font-semibold text-slate-200">Facility Downtime</div>
+                    <p class="text-xs text-slate-400">Segmented operational protocols executed in live high-stakes corridors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Technical Demo: Fuzzy Logic Engine -->
+        <section class="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-sky-500/30 space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="text-xs font-mono px-2 py-1 bg-sky-950 text-sky-300 border border-sky-800 rounded">Interactive Demo</span>
+                    <h3 class="text-xl font-bold mt-2">Algorithmic Fuzzy Logic Keyword Pipeline</h3>
+                    <p class="text-sm text-slate-400">Simulating the process that deduplicated Viator's multi-geo campaign datasets.</p>
+                </div>
+                <button onclick="runDeduplication()" class="px-4 py-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm rounded-lg transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-play"></i> Run Fuzzy Pipeline
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+                <!-- Raw Data Box -->
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
+                    <div class="text-slate-400 flex justify-between">
+                        <span>RAW INPUT DATASET</span>
+                        <span id="raw-count" class="text-rose-400">6 Items</span>
+                    </div>
+                    <ul id="raw-list" class="space-y-1 text-slate-300">
+                        <li class="p-1 bg-slate-900 rounded">1. London Walking Tour Ticket</li>
+                        <li class="p-1 bg-slate-900 rounded">2. london walking tours ticket</li>
+                        <li class="p-1 bg-slate-900 rounded">3. Buy London Walking Tour Tickets</li>
+                        <li class="p-1 bg-slate-900 rounded">4. Eiffel Tower Fast Track Pass</li>
+                        <li class="p-1 bg-slate-900 rounded">5. eiffel tower fast-track pass</li>
+                        <li class="p-1 bg-slate-900 rounded">6. Eiffel Tower Entry Ticket</li>
+                    </ul>
+                </div>
+
+                <!-- Cleaned Output Box -->
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
+                    <div class="text-slate-400 flex justify-between">
+                        <span>AUTOMATED FUZZY CLUSTER OUTPUT</span>
+                        <span id="clean-count" class="text-slate-500">Unprocessed</span>
+                    </div>
+                    <ul id="clean-list" class="space-y-1 text-slate-500 italic">
+                        <li class="p-1">Click "Run Fuzzy Pipeline" to trigger clustering...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Portfolio -->
+        <section class="space-y-6">
+            <h3 class="text-xl font-bold border-b border-slate-800 pb-2">Core Case Studies</h3>
+
+            <!-- Case Study 1 -->
+            <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 space-y-3">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                    <h4 class="text-lg font-bold text-sky-400">Automated SERP Data Engineering & Competitor Intelligence</h4>
+                    <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-300 rounded">ThinkVEN</span>
+                </div>
+                <p class="text-sm text-slate-300"><strong class="text-slate-100">Problem:</strong> Client required granular visibility into competitor search tactics across massive keyword groups without triggering bot-detection systems.</p>
+                <p class="text-sm text-slate-300"><strong class="text-slate-100">Solution:</strong> Engineered a headless web-scraping architecture using Python/Selenium with footprint obfuscation. Automated the harvest and dynamic categorization of organic/paid search elements.</p>
+                <p class="text-sm text-emerald-400 font-semibold"><i class="fa-solid fa-arrow-up-right-dots mr-1"></i> Result: Boosted ad-copy variation testing velocity by 200% with double-digit CTR lifts on targeted accounts.</p>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="p-6 rounded-xl bg-slate-900/50 border border-slate-800 space-y-3">
+                <div class="flex justify-between items-start flex-wrap gap-2">
+                    <h4 class="text-lg font-bold text-sky-400">Zero-Capital Product Engineering & Market Expansion</h4>
+                    <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-300 rounded">Alsysco</span>
+                </div>
+                <p class="text-sm text-slate-300"><strong class="text-slate-100">Problem:</strong> High capital barriers for tooling dies and regional power grid volatility blocked sub-Saharan market growth.</p>
+                <p class="text-sm text-slate-300"><strong class="text-slate-100">Solution:</strong> Audited open-die catalogs to compile a zero-cost solution catalog, alongside deploying off-grid arbor press installation kits.</p>
+                <p class="text-sm text-emerald-400 font-semibold"><i class="fa-solid fa-arrow-up-right-dots mr-1"></i> Result: Saved 100% of tooling capital costs, unlocking £2.5M in export revenue pipeline across 3 multi-country agreements.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function runDeduplication() {
+            const cleanList = document.getElementById('clean-list');
+            const cleanCount = document.getElementById('clean-count');
+            
+            cleanList.className = "space-y-1 font-mono text-xs text-slate-200";
+            cleanCount.className = "text-emerald-400 font-bold";
+            cleanCount.innerText = "2 Primary Clusters (Deduplicated)";
+
+            cleanList.innerHTML = `
+                <li class="p-2 bg-sky-950/40 border border-sky-800/50 rounded space-y-1">
+                    <div class="text-sky-300 font-bold">Cluster 1: [London Walking Tours] (Matching Score: 94%)</div>
+                    <div class="text-slate-400 text-[11px] pl-2">↳ Grouped: "London Walking Tour Ticket", "london walking tours ticket", "Buy London..."</div>
+                </li>
+                <li class="p-2 bg-sky-950/40 border border-sky-800/50 rounded space-y-1">
+                    <div class="text-sky-300 font-bold">Cluster 2: [Eiffel Tower Access] (Matching Score: 91%)</div>
+                    <div class="text-slate-400 text-[11px] pl-2">↳ Grouped: "Eiffel Tower Fast Track Pass", "eiffel tower fast-track pass", "Eiffel Tower Entry..."</div>
+                </li>
+            `;
+        }
+    </script>
+</body>
