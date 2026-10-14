@@ -12,316 +12,367 @@
         defer
     ></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #f7f5f0;
-        }
-    </style>
-</head>
-<body class="text-zinc-900 antialiased selection:bg-zinc-900 selection:text-white">
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --tag-bg: #0369a1;
+      --tag-text: #e0f2fe;
+    }
 
-    <!-- Header / Nav Bar -->
-    <header class="sticky top-0 z-50 bg-[#f7f5f0]/80 backdrop-blur-md border-b border-zinc-200/80">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-            <div>
-                <a href="#" class="text-xl font-extrabold tracking-tight text-zinc-900 hover:opacity-80 transition-opacity">Rob Hammond</a>
-                <p class="text-xs font-medium text-zinc-500 tracking-wide uppercase mt-0.5">Commercial & Operational Solutions Architect</p>
-            </div>
-            <div class="flex items-center gap-3 text-xs font-semibold text-zinc-600">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-zinc-200 shadow-sm text-zinc-700">
-                    <i class="fa-solid fa-location-dot text-zinc-400"></i> Peterborough, UK
-                </span>
-                <a href="mailto:robtalksdata@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-zinc-200 shadow-sm text-zinc-700 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all">
-                    <i class="fa-solid fa-envelope"></i> Email
-                </a>
-                <a href="https://linkedin.com/in/hammondrob" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-zinc-200 shadow-sm text-zinc-700 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2.5rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 3.5rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--card-bg);
+      border-color: var(--text-muted);
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+
+    .about-text {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .about-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .project-detail {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-detail strong {
+      color: var(--text-main);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skills-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .skills-card h3 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .skills-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .skills-card li {
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="eyebrow">Enterprise &amp; Commercial Account Executive | Vertical SaaS &amp; ConTech</div>
+      <h1>Bridging Complex Industry Workflows with Modern Software &amp; Data Automation</h1>
+      <p class="lead">
+        I help vertical scale-ups and enterprise SaaS vendors close complex, multi-stakeholder deals across the built environment, public sector, and digital media. With 10+ years driving commercial revenue and hands-on proficiency in Python and data pipelines, I combine genuine domain fluency with the technical ability to run high-impact discovery and prove ROI faster.
+      </p>
+      <div class="btn-group">
+        <a href="Rob_Hammond_CV.pdf" class="btn btn-primary" target="_blank">Download CV (PDF)</a>
+        <a href="https://www.linkedin.com/in/hammondrob/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        <a href="mailto:robtalksdata@gmail.com" class="btn btn-secondary">Get In Touch</a>
+      </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+    <section id="about">
+      <h2>Where Deep Vertical Experience Meets Technical Acumen</h2>
+      <p class="about-text">
+        Most enterprise software deals stall because the commercial team doesn't speak the buyer's operational language. Over the past decade, I have sat directly across the table from:
+      </p>
+      <ul class="about-list">
+        <li><strong>Architects, Specifiers &amp; Tier-1 Contractors:</strong> Managing tender documents, protecting specification integrity against value-engineering, managing build risk, and securing contractor supply chains.</li>
+        <li><strong>NHS Foundation Trusts &amp; Healthcare Estates:</strong> Navigating public sector procurement frameworks, clinical corridor continuity, and long-term asset management.</li>
+        <li><strong>C-Suite &amp; Commercial Growth Leaders:</strong> Aligning software investments directly to EBITDA, workflow automation, and marketing ROI.</li>
+      </ul>
+      <p class="about-text">
+        Rather than waiting on solutions engineers for preliminary technical validation, I build custom scrapers, automate pipeline intelligence, and prototype integrations to accelerate time-to-value for enterprise prospects.
+      </p>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="space-y-8">
-            <div class="max-w-3xl space-y-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-white text-xs font-semibold tracking-wide">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Executive Brief
-                </div>
-                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.15]">
-                    Bridging Operational Bottlenecks & High-Yield Commercial Assets
-                </h1>
-                <p class="text-zinc-600 text-base sm:text-lg leading-relaxed font-normal">
-                    Designing and deploying custom technical pipelines, operational protocols, and data architecture to eliminate workflow friction, secure legacy systems, and unlock new revenue channels.
-                </p>
-            </div>
+    <section id="projects">
+      <h2>Sales Enablement &amp; Commercial Tooling</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-title">Automated SERP Intelligence &amp; Competitive Discovery Pipeline</div>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">APIs</span>
+          </div>
+          <p class="project-detail"><strong>Commercial Problem:</strong> High-value prospects often lack visibility into their competitive gaps, making initial discovery conversations generic and slow to progress.</p>
+          <p class="project-detail"><strong>Solution:</strong> Engineered an automated Python tool that crawls SERP data and maps competitor keyword overlaps into clean, executive-ready audits.</p>
+          <p class="project-detail"><strong>Sales Impact:</strong> Delivered instant, data-backed insights during initial discovery calls, proving immediate commercial upside and lifting qualified opportunity conversion by 30%.</p>
+        </div>
 
-            <!-- Key Impact Metrics (Cards) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow space-y-2">
-                    <div class="text-3xl font-extrabold text-zinc-900 tracking-tight">£2.5M</div>
-                    <div class="text-xs font-bold text-zinc-800 uppercase tracking-wider">Export Pipeline</div>
-                    <p class="text-xs text-zinc-500 leading-normal">Zero-capital tooling architecture enabling Sub-Saharan expansion.</p>
-                </div>
+        <div class="project-card">
+          <div class="project-title">High-Precision Keyword &amp; Catalog Deduplication Engine</div>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Regex</span>
+            <span class="tag">Data Cleansing</span>
+          </div>
+          <p class="project-detail"><strong>Commercial Problem:</strong> Enterprise clients managing large-scale ad campaigns or catalogs leak substantial budget through keyword cannibalisation and duplicate entities.</p>
+          <p class="project-detail"><strong>Solution:</strong> Built a programmatic deduplication engine capable of parsing and restructuring hundreds of thousands of entries in seconds.</p>
+          <p class="project-detail"><strong>Sales Impact:</strong> Deployed as a technical proof-of-concept during 6-figure enterprise pitches, removing technical objections and accelerating the contract approval stage.</p>
+        </div>
 
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow space-y-2">
-                    <div class="text-3xl font-extrabold text-zinc-900 tracking-tight">99.8%</div>
-                    <div class="text-xs font-bold text-zinc-800 uppercase tracking-wider">Lead Time Reduction</div>
-                    <p class="text-xs text-zinc-500 leading-normal">Automated 400+ hours of manual data matching down to a 5-minute Python run.</p>
-                </div>
+        <div class="project-card">
+          <div class="project-title">Enterprise Pipeline &amp; Forecast Predictability Engine</div>
+          <div class="tech-tags">
+            <span class="tag">Advanced Excel</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">Dynamic Arrays</span>
+          </div>
+          <p class="project-detail"><strong>Commercial Problem:</strong> Subjective stage updates in CRM platforms routinely skew revenue forecasts and hide pipeline leakage on long-cycle opportunities.</p>
+          <p class="project-detail"><strong>Solution:</strong> Architected a dynamic forecasting model evaluating stage velocity, deal-size weighting, and historical drop-off patterns.</p>
+          <p class="project-detail"><strong>Sales Impact:</strong> Improved divisional forecast predictability by 15% and allowed focused outbound execution on high-probability opportunities.</p>
+        </div>
 
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow space-y-2">
-                    <div class="text-3xl font-extrabold text-zinc-900 tracking-tight">3×</div>
-                    <div class="text-xs font-bold text-zinc-800 uppercase tracking-wider">Testing Velocity</div>
-                    <p class="text-xs text-zinc-500 leading-normal">Engineered competitive SERP intelligence scrapers driving CTR lifts.</p>
-                </div>
+      </div>
+    </section>
 
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow space-y-2">
-                    <div class="text-3xl font-extrabold text-zinc-900 tracking-tight">0 Hours</div>
-                    <div class="text-xs font-bold text-zinc-800 uppercase tracking-wider">Facility Downtime</div>
-                    <p class="text-xs text-zinc-500 leading-normal">Executed live-environment infrastructure upgrades in active clinical corridors.</p>
-                </div>
-            </div>
-        </section>
+    <section id="capabilities">
+      <h2>Core Capabilities</h2>
+      <div class="skills-grid">
+        <div class="skills-card">
+          <h3>Commercial Execution</h3>
+          <ul>
+            <li>Full Enterprise Sales Cycles (6–9+ mo)</li>
+            <li>Multi-threaded MEDDICC Discovery</li>
+            <li>Six-Figure Contract Negotiations</li>
+            <li>Outbound Pipeline Generation</li>
+            <li>RFP &amp; Procurement Navigation</li>
+          </ul>
+        </div>
+        <div class="skills-card">
+          <h3>Vertical Domain Depth</h3>
+          <ul>
+            <li>Construction Tech (ConTech) &amp; Spec</li>
+            <li>Main Contractor &amp; Subcontractor Chains</li>
+            <li>NHS Estates &amp; Public Frameworks</li>
+            <li>MarTech, Data Analytics &amp; Attribution</li>
+            <li>Payment Integrations &amp; ISV Channels</li>
+          </ul>
+        </div>
+        <div class="skills-card">
+          <h3>Technical Fluency</h3>
+          <ul>
+            <li>Python (Scraping, APIs, Pandas)</li>
+            <li>Advanced Excel &amp; Dynamic Data Modelling</li>
+            <li>CRM Architecture (HubSpot / Salesforce)</li>
+            <li>AI-Assisted Prospecting Workflows</li>
+            <li>Credible Discovery-Stage Solution Demos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <!-- Technical Competencies -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-2 border-b border-zinc-200 pb-3">
-                <span class="text-xs font-bold uppercase tracking-wider text-zinc-400">Toolkit</span>
-                <h2 class="text-lg font-bold text-zinc-900">Core Technical Competencies</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-2">
-                    <div class="text-zinc-900 font-bold text-sm flex items-center gap-2">
-                        <i class="fa-solid fa-code text-zinc-500"></i> Automation & Scripting
-                    </div>
-                    <p class="text-xs text-zinc-600 leading-relaxed font-medium">Python (Selenium, Playwright), SQL, Advanced Excel (Power Query, VBA, Performance Dashboards), API Integrations</p>
-                </div>
+    <footer>
+      <h3>Let's Connect</h3>
+      <p>Looking for an Account Executive who knows your buyers' operational challenges and can credibly demo technical value from day one?</p>
+      
+      <div class="footer-links">
+        <a href="mailto:robtalksdata@gmail.com">robtalksdata@gmail.com</a>
+        <a href="tel:+447407848434">07407 848 434</a>
+        <a href="https://www.linkedin.com/in/hammondrob/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>Location: Cambridgeshire / Greater London (Hybrid / Remote)</span>
+      </div>
+      
+      <p style="margin-top: 1rem; font-size: 0.85rem; color: #64748b;">
+        Beyond the quota: FIDE Arbiter (International Chess Federation) &amp; tournament director.
+      </p>
+    </footer>
+  </div>
 
-                <div class="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-2">
-                    <div class="text-zinc-900 font-bold text-sm flex items-center gap-2">
-                        <i class="fa-solid fa-database text-zinc-500"></i> Data Architecture
-                    </div>
-                    <p class="text-xs text-zinc-600 leading-relaxed font-medium">Fuzzy-Logic Matching, Relational Datasets, Headless Web Scraping, Tableau, HubSpot, Salesforce</p>
-                </div>
-
-                <div class="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-2">
-                    <div class="text-zinc-900 font-bold text-sm flex items-center gap-2">
-                        <i class="fa-solid fa-chart-line text-zinc-500"></i> Strategic Operations
-                    </div>
-                    <p class="text-xs text-zinc-600 leading-relaxed font-medium">Digital Marketing Execution (Google Ads, GA4, Attribution Modeling), Supply Chain Resilience, Site Logistics</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Technical Demo Section -->
-        <section class="p-8 rounded-3xl bg-zinc-900 text-white shadow-xl space-y-6">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div class="space-y-1">
-                    <div class="flex items-center gap-2">
-                        <span class="text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 bg-zinc-800 text-zinc-300 rounded-full border border-zinc-700">Proof of Concept</span>
-                        <span class="text-xs text-zinc-400">High-Volume Data Matching</span>
-                    </div>
-                    <h2 class="text-xl font-bold text-white">Algorithmic Keyword Deduplication Engine</h2>
-                    <p class="text-xs text-zinc-400">Simulates the automated data pipeline used to streamline global ad campaign datasets for Viator.</p>
-                </div>
-                <button onclick="runDeduplication()" class="px-5 py-2.5 bg-white hover:bg-zinc-100 text-zinc-900 font-bold text-xs rounded-full transition-all shadow-md flex items-center gap-2 self-start md:self-auto shrink-0">
-                    <i class="fa-solid fa-play text-xs"></i> Execute Pipeline
-                </button>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
-                <!-- Raw Data Box -->
-                <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 space-y-3">
-                    <div class="text-zinc-400 flex justify-between font-sans">
-                        <span class="font-semibold text-xs text-zinc-300">Unstructured Raw Input</span>
-                        <span id="raw-count" class="text-rose-400 text-xs font-mono">6 Duplicate Entries</span>
-                    </div>
-                    <ul id="raw-list" class="space-y-1.5 text-zinc-300">
-                        <li class="p-2 bg-zinc-900/90 rounded-lg text-[11px]">1. London Walking Tour Ticket</li>
-                        <li class="p-2 bg-zinc-900/90 rounded-lg text-[11px]">2. london walking tours ticket</li>
-                        <li class="p-2 bg-zinc-900/90 rounded-lg text-[11px]">3. Buy London Walking Tour Tickets</li>
-                        <li class="p-2 bg-zinc-900/90 rounded-lg text-[11px]">4. Eiffel Tower Fast Track Pass</li>
-                        <li class="p-2 bg-zinc-900/90 rounded-lg text-[11px]">5. eiffel tower fast-track pass</li>
-                        <li class="p-2 bg-zinc-900/90 rounded-lg text-[11px]">6. Eiffel Tower Entry Ticket</li>
-                    </ul>
-                </div>
-
-                <!-- Cleaned Output Box -->
-                <div class="bg-zinc-950/80 p-4 rounded-xl border border-zinc-800 space-y-3">
-                    <div class="text-zinc-400 flex justify-between font-sans">
-                        <span class="font-semibold text-xs text-zinc-300">Automated Cluster Output</span>
-                        <span id="clean-count" class="text-zinc-500 text-xs font-mono">Awaiting Execution</span>
-                    </div>
-                    <ul id="clean-list" class="space-y-1.5 text-zinc-500 italic">
-                        <li class="p-2 text-[11px]">Click "Execute Pipeline" to run fuzzy matching algorithm...</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Commercial Case Studies -->
-        <section class="space-y-6">
-            <div class="flex justify-between items-end border-b border-zinc-200 pb-3">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-zinc-400 block mb-0.5">Selected Work</span>
-                    <h2 class="text-xl font-bold text-zinc-900">Commercial Case Studies</h2>
-                </div>
-                <span class="text-xs font-medium text-zinc-500 hidden sm:inline-block">6 Delivered Projects</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <!-- Case Study 1: Viator -->
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="px-2.5 py-1 bg-zinc-100 text-zinc-800 rounded-full text-[11px] font-bold">Viator</span>
-                            <span class="text-[11px] font-mono text-zinc-400">Data Engineering</span>
-                        </div>
-                        <h3 class="text-base font-bold text-zinc-900">Algorithmic Data Pipeline & Cleanup</h3>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Challenge:</strong> Legacy keyword export files were crashing standard applications, stalling marketing workflows, and wasting ad spend on redundant search terms across global campaigns.</p>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Solution:</strong> Built a custom Python pipeline incorporating fuzzy-logic matching algorithms to parse, cluster, and deduplicate multi-geo campaign keywords automatically.</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100">
-                        <p class="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Replaced 400+ hours of manual data work with a 5-minute pipeline run.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Case Study 2: Alsysco -->
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="px-2.5 py-1 bg-zinc-100 text-zinc-800 rounded-full text-[11px] font-bold">Alsysco</span>
-                            <span class="text-[11px] font-mono text-zinc-400">Global Operations</span>
-                        </div>
-                        <h3 class="text-base font-bold text-zinc-900">Zero-Capital Product Engineering & Market Expansion</h3>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Challenge:</strong> Heavy capital requirements for custom tooling dies and regional power grid instability threatened Sub-Saharan expansion efforts.</p>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Solution:</strong> Audited existing open-die tooling catalogues to engineer zero-capital architectural solutions paired with off-grid installation tooling kits.</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100">
-                        <p class="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Saved 100% of capital tooling costs, unlocking a £2.5M export pipeline.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Case Study 3: ThinkVEN -->
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="px-2.5 py-1 bg-zinc-100 text-zinc-800 rounded-full text-[11px] font-bold">ThinkVEN</span>
-                            <span class="text-[11px] font-mono text-zinc-400">Automation</span>
-                        </div>
-                        <h3 class="text-base font-bold text-zinc-900">Automated Competitive Search Scraping & SERP Mining</h3>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Challenge:</strong> Required granular, real-time insight into competitor search tactics without triggering automated anti-bot defenses.</p>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Solution:</strong> Engineered a headless Python/Selenium web scraper utilising footprint obfuscation to harvest and classify search page elements dynamically.</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100">
-                        <p class="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Boosted ad-copy testing velocity by 200% with double-digit CTR lifts.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Case Study 4: NHS Frimley Trust -->
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="px-2.5 py-1 bg-zinc-100 text-zinc-800 rounded-full text-[11px] font-bold">NHS Frimley Trust</span>
-                            <span class="text-[11px] font-mono text-zinc-400">Logistics</span>
-                        </div>
-                        <h3 class="text-base font-bold text-zinc-900">Live Clinical Infrastructure Engineering</h3>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Challenge:</strong> Vital hospital corridor flooring required complete replacement where medical traffic could not be halted or rerouted.</p>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Solution:</strong> Designed and deployed a mobile, modular installation protocol occupying under 50% of corridor width during active work phases.</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100">
-                        <p class="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Delivered on schedule with zero hospital downtime or corridor closures.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Case Study 5: Polyflor -->
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="px-2.5 py-1 bg-zinc-100 text-zinc-800 rounded-full text-[11px] font-bold">Polyflor Ltd</span>
-                            <span class="text-[11px] font-mono text-zinc-400">Account Strategy</span>
-                        </div>
-                        <h3 class="text-base font-bold text-zinc-900">Multi-Account Specification Scaling</h3>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Challenge:</strong> Managing high-volume technical material specifications across 25+ simultaneous public and commercial builds without margin erosion or delivery delays.</p>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Solution:</strong> Built an end-to-end account management protocol mapping technical specifications directly to main contractor schedules and budget frameworks.</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100">
-                        <p class="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Delivered 25+ major commercial accounts while locking in repeat frameworks.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Case Study 6: CAPS / Frimley Trust -->
-                <div class="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-start gap-2">
-                            <span class="px-2.5 py-1 bg-zinc-100 text-zinc-800 rounded-full text-[11px] font-bold">CAPS / Frimley</span>
-                            <span class="text-[11px] font-mono text-zinc-400">Supply Chain</span>
-                        </div>
-                        <h3 class="text-base font-bold text-zinc-900">Supply Chain De-risking & Lead-Time Optimisation</h3>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Challenge:</strong> Critical healthcare builds were exposed to unpredictable global supply chains, risking expensive project downtime.</p>
-                        <p class="text-xs text-zinc-600 leading-relaxed"><strong class="text-zinc-800">Solution:</strong> Shifted purchasing strategy to a localised buffer-stock call-off model by securing factory allocations for regional distributor dispatch.</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100">
-                        <p class="text-xs text-emerald-700 font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check text-emerald-500"></i> Reduced project lead times from weeks to hours across 3 major hospitals.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Footer / Contact Prompt -->
-        <footer class="p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm text-center space-y-4">
-            <h3 class="text-xl font-bold text-zinc-900">Let's discuss how we can solve your operational bottlenecks.</h3>
-            <p class="text-xs text-zinc-500 max-w-md mx-auto">Available for technical architecture consulting, automated workflow engineering, and commercial strategy advisory.</p>
-            <div class="pt-2 flex justify-center items-center gap-3">
-                <a href="mailto:robtalksdata@gmail.com" class="px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs rounded-full transition-all shadow-sm">
-                    Get in Touch
-                </a>
-                <a href="https://linkedin.com/in/hammondrob" target="_blank" class="px-5 py-2.5 bg-zinc-100 hover:bg-zinc-200 text-zinc-800 font-bold text-xs rounded-full transition-all">
-                    LinkedIn Profile
-                </a>
-            </div>
-        </footer>
-
-    </main>
-
-    <script>
-        function runDeduplication() {
-            const cleanList = document.getElementById('clean-list');
-            const cleanCount = document.getElementById('clean-count');
-            
-            cleanList.className = "space-y-1.5 font-mono text-xs text-zinc-200";
-            cleanCount.className = "text-emerald-400 font-bold font-mono text-xs";
-            cleanCount.innerText = "2 Clean Clusters (100% Deduplicated)";
-
-            cleanList.innerHTML = `
-                <li class="p-2 bg-zinc-900 border border-zinc-800 rounded-lg space-y-1 text-[11px]">
-                    <div class="text-emerald-400 font-bold">Cluster 1: [London Walking Tours] (94% Match)</div>
-                    <div class="text-zinc-400 font-sans text-[11px] pl-2">↳ Grouped 3 redundant variations into single primary target</div>
-                </li>
-                <li class="p-2 bg-zinc-900 border border-zinc-800 rounded-lg space-y-1 text-[11px]">
-                    <div class="text-emerald-400 font-bold">Cluster 2: [Eiffel Tower Access] (91% Match)</div>
-                    <div class="text-zinc-400 font-sans text-[11px] pl-2">↳ Grouped 3 redundant variations into single primary target</div>
-                </li>
-            `;
-        }
-    </script>
 </body>
 </html>
